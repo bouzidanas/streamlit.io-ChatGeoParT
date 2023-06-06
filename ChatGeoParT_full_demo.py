@@ -247,6 +247,16 @@ slide_markdown_close = r"""
 
 st.title("Chat GeoParT!")
 
+with st.expander("Instructions and tips"):
+    st.markdown("""**This app lets you generate a Jeopardy style trivia game with questions and answers.** 
+- _Start by entering 6 topics of your choice to be used as the categories._
+- _After all 6 categories are entered, the New Game button will be enabled. Click it to generate the game (this might take a couple of minuites)._
+- _The game will be generated as a series of slides which you can navigate through by clicking text that is **:yellow[yellow]**._
+- _For the full screen experience, make sure to give focus to the slides by clicking anywhere on a slide and then press `F` on you keyboard._
+- _You can also use the arrow keys to navigate through the slides in linear order (not in gameplay order)._
+- _You can increase the amounts by changing the multiplier setting in the sidebar._
+- _Check out the settings in the sidebar for more options._
+- _After the slides have been generated, you can download the them along with the answers and a simple streamlit app to that allows you to play the game. Run this app as you would any streamlit app and you will be able to play any of the games files stored in the game folder._""")
 
 categories = stt.st_tags(label="Enter 6 trivia categories", suggestions="Enter a category", maxtags=6, key="categories")
 cola, colb, colc = st.columns([1.1,4.6,1])
