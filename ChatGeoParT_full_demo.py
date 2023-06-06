@@ -11,7 +11,6 @@ import streamlit_tags as stt
 
 from io import BytesIO
 from zipfile import ZipFile
-from dotenv import load_dotenv
 from code_editor import code_editor
 
 num_intro_slides = 3
@@ -32,13 +31,6 @@ if 'answerfiletxt' not in st.session_state:
 ## OpenAI API Credentials setup ====================================================
 
 # Openai local configuration
-# Make sure to create a .env file in the same directory as this script (and in .gitignore)
-load_dotenv()
-try:
-    openai.organization = os.getenv("OPENAI_API_ORGANIZATION")
-    openai.api_key = os.getenv("OPENAI_API_KEY")
-except:
-    sys.stdout.write("No local variables containing OpenAI API credentials found.")
 
 with st.sidebar:
     st.markdown("## Configuration")
