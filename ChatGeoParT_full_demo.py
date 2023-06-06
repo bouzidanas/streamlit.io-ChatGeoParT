@@ -256,7 +256,7 @@ with st.expander("Instructions and tips"):
 - _You can also use the arrow keys to navigate through the slides in linear order (not in gameplay order)._
 - _You can increase the amounts by changing the multiplier setting in the sidebar._
 - _Check out the settings in the sidebar for more options._
-- _After the slides have been generated, you can download the them along with the answers and a simple streamlit app to that allows you to play the game. Run this app as you would any streamlit app and you will be able to play any of the games files stored in the game folder._""")
+- _After the slides have been generated, you can download the them along with the answers and a simple streamlit app that allows you to play the game. Run this app as you would any streamlit app and you will be able to play any of the games files stored in the game folder._""")
 
 categories = stt.st_tags(label="Enter 6 trivia categories", suggestions="Enter a category", maxtags=6, key="categories")
 cola, colb, colc = st.columns([1.1,4.6,1])
