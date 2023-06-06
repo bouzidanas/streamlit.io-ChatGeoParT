@@ -217,7 +217,7 @@ def format_qa_response(response):
 ## Main App ========================================================================
 slide_markdown = r"""<section data-markdown="" data-separator-vertical="^--$" data-separator-notes="^Answer:" >
 <script type="text/template">
-## [Welcome to AI Jeopardy!](#/1)"""
+## [Welcome to Chat GeoParT!](#/1)"""
 
 slide_markdown_close = r"""
 </script>
@@ -248,7 +248,7 @@ slide_markdown_close = r"""
 st.title("Chat GeoParT!")
 
 
-categories = stt.st_tags(label="Enter 6 Jeopardy categories", suggestions="Enter a category", maxtags=6, key="categories")
+categories = stt.st_tags(label="Enter 6 trivia categories", suggestions="Enter a category", maxtags=6, key="categories")
 cola, colb, colc = st.columns([1.1,4.6,1])
 if categories:
     if cola.button("New Game", disabled=len(categories) < 6):
