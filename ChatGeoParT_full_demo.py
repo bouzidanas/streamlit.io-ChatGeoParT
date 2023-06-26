@@ -265,11 +265,11 @@ if categories:
         token_count_at_start = st.session_state.tokens
         with st.spinner("Generating ..."):
             intro_offset = num_intro_slides
-            slide_markdown += "\n---\n"+ r"""<!-- .slide: data-transition="convex" -->""" + "\n ## [The categories are ... ](#/2) "
+            slide_markdown += "\n---\n"+ r"""<!-- .slide: data-transition="zoom" -->""" + "\n ## [The categories are ... ](#/2) "
             for category in categories:
-                slide_markdown += f"\n---\n"+ r"""<!-- .slide: data-transition="convex" -->""" + f"\n ## [{category.upper()}](#/{intro_offset})"
+                slide_markdown += f"\n---\n"+ r"""<!-- .slide: data-transition="concave" -->""" + f"\n ## [{category.upper()}](#/{intro_offset})"
                 intro_offset += 1
-            slide_markdown += "\n---\n" + r"""<!-- .slide: data-transition="fade" data-background-image="https://cdn.vox-cdn.com/thumbor/wEcBsqpKaKmrw6TWYNIDQfOPENk=/172x118:2400x1232/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19577016/jeopardy_02.jpg" data-background-size="118%" data-background-position="20%" -->""" + "\n"
+            slide_markdown += "\n---\n" + r"""<!-- .slide: data-transition="zoom" data-background-image="https://cdn.vox-cdn.com/thumbor/wEcBsqpKaKmrw6TWYNIDQfOPENk=/172x118:2400x1232/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19577016/jeopardy_02.jpg" data-background-size="118%" data-background-position="20%" -->""" + "\n"
             slide_markdown += "|"
             jeopardy_set = []
             loops_to_time = 1
