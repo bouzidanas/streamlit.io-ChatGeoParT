@@ -299,7 +299,7 @@ if categories:
                 for column in range(6):
                     for row in range(5):
                         slide_markdown += "\n---\n"
-                        slide_markdown += f'<!-- .slide: data-transition="convex" -->\n### ({categories[column].upper()}) \n# [${((row+1)*200*multiplier)}](#/{column*5 + row + intro_offset}/1)'
+                        slide_markdown += f'<!-- .slide: data-transition="zoom-out convex" -->\n### ({categories[column].upper()}) \n# [${((row+1)*200*multiplier)}](#/{column*5 + row + intro_offset}/1)'
                         slide_markdown += "\n--\n"
                         slide_markdown += f'<!-- .slide: data-transition="convex" data-autoslide="{question_timer*1000}" -->\n### [{jeopardy_set[column][row][0]}](#/{column*5 + row + intro_offset}/2)\nAnswer:{jeopardy_set[column][row][1]}'
                         slide_markdown += "\n--\n"
