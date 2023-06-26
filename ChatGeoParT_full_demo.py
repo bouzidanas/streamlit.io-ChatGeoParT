@@ -303,7 +303,7 @@ if categories:
                         slide_markdown += "\n--\n"
                         slide_markdown += f'<!-- .slide: data-transition="zoom" data-autoslide="{question_timer*1000}" -->\n### [{jeopardy_set[column][row][0]}](#/{column*5 + row + intro_offset}/2)\nAnswer:{jeopardy_set[column][row][1]}'
                         slide_markdown += "\n--\n"
-                        slide_markdown += f"### [{jeopardy_set[column][row][1]}](#/{intro_offset - 1})"
+                        slide_markdown += f'<!-- .slide: data-transition="zoom-in fade-out" -->\n### [{jeopardy_set[column][row][1]}](#/{intro_offset - 1})'
                         answerfiletxt += f"{categories[column].upper()}\n\t[{((row+1)*200*multiplier)}]: Q:{jeopardy_set[column][row][0]}\n\t\tA:{jeopardy_set[column][row][1]}\n\n"
                 slide_markdown += slide_markdown_close
 
