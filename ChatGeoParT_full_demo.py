@@ -269,7 +269,7 @@ if categories:
             for category in categories:
                 slide_markdown += f"\n---\n"+ r"""<!-- .slide: data-transition="convex" -->""" + f"\n ## [{category.upper()}](#/{intro_offset})"
                 intro_offset += 1
-            slide_markdown += "\n---\n" + r"""<!-- .slide: data-background-image="https://cdn.vox-cdn.com/thumbor/wEcBsqpKaKmrw6TWYNIDQfOPENk=/172x118:2400x1232/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19577016/jeopardy_02.jpg" data-background-size="118%" data-background-position="20%" -->""" + "\n"
+            slide_markdown += "\n---\n" + r"""<!-- .slide: data-transition="none" data-background-image="https://cdn.vox-cdn.com/thumbor/wEcBsqpKaKmrw6TWYNIDQfOPENk=/172x118:2400x1232/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19577016/jeopardy_02.jpg" data-background-size="118%" data-background-position="20%" -->""" + "\n"
             slide_markdown += "|"
             jeopardy_set = []
             loops_to_time = 1
@@ -301,7 +301,7 @@ if categories:
                         slide_markdown += "\n---\n"
                         slide_markdown += f"### ({categories[column].upper()}) \n# [${((row+1)*200*multiplier)}](#/{column*5 + row + intro_offset}/1)"
                         slide_markdown += "\n--\n"
-                        slide_markdown += f'<!-- .slide: data-autoslide="{question_timer*1000}" -->\n### [{jeopardy_set[column][row][0]}](#/{column*5 + row + intro_offset}/2)\nAnswer:{jeopardy_set[column][row][1]}'
+                        slide_markdown += f'<!-- .slide: data-transition="convex" data-autoslide="{question_timer*1000}" -->\n### [{jeopardy_set[column][row][0]}](#/{column*5 + row + intro_offset}/2)\nAnswer:{jeopardy_set[column][row][1]}'
                         slide_markdown += "\n--\n"
                         slide_markdown += f"### [{jeopardy_set[column][row][1]}](#/{intro_offset - 1})"
                         answerfiletxt += f"{categories[column].upper()}\n\t[{((row+1)*200*multiplier)}]: Q:{jeopardy_set[column][row][0]}\n\t\tA:{jeopardy_set[column][row][1]}\n\n"
